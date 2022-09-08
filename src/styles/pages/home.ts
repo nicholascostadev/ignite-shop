@@ -25,6 +25,7 @@ export const Product = styled('div', {
   },
 
   footer: {
+    cursor: 'default',
     position: 'absolute',
     bottom: '0.25rem',
     left: '0.25rem',
@@ -42,14 +43,20 @@ export const Product = styled('div', {
     opacity: 0,
     transition: 'all 0.2s ease-in-out',
 
-    strong: {
-      fontSize: "$lg"
-    },
-
-    span: {
-      fontSize: "$xl",
-      fontWeight: 'bold',
-      color: '$green300',
+    div: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 4,
+      strong: {
+        color: "$white",
+        fontSize: "$lg"
+      },
+  
+      span: {
+        fontSize: "$xl",
+        fontWeight: 'bold',
+        color: '$green300',
+      }
     }
   },
 

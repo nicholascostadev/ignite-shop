@@ -2,14 +2,11 @@ import { AppProps } from 'next/app';
 
 import { globalStyles } from '../styles/global';
 
-globalStyles();
-
-import Image from 'next/future/image'
-
-import logoImg from '../assets/logo.svg'
-import { CartButton, Container, Header } from '../styles/pages/app';
 import { CartProvider } from 'use-shopping-cart';
-import { Handbag } from 'phosphor-react'
+import { Header } from '../components/Header';
+import { Container } from '../styles/pages/app';
+
+globalStyles();
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -24,12 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
       loading={<p>Loading...</p>}
     >
       <Container>
-        <Header>
-          <Image src={logoImg} alt="" />
-          <CartButton>
-            <Handbag size={24} />
-          </CartButton>
-        </Header>
+        <Header />
         <Component {...pageProps} />
       </Container>
     </CartProvider>
