@@ -13,9 +13,11 @@
     "axios": "^0.27.2",
     "keen-slider": "^6.7.0",
     "next": "12.2.5",
+    "phosphor-react": "^1.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "stripe": "^10.7.0"
+    "stripe": "^10.7.0",
+    "use-shopping-cart": "^3.1.2"
   },
   "devDependencies": {
     "@types/node": "^18.7.15",
