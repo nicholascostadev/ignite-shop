@@ -18,7 +18,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const arrayOfProducts = Object.keys(items).map(key => items[key])
   const pricesId = arrayOfProducts.map(item => item.price_id)
-  console.log(pricesId);
 
   const lineItems = pricesId.map(priceId => {
     return {
