@@ -9,7 +9,9 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/nicholascostadev/ignite-shop?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/nicholascostadev/ignite-shop?style=for-the-badge)
 ![Github open issues](https://img.shields.io/github/issues/nicholascostadev/ignite-shop?style=for-the-badge)
-[![MIT License](https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge)]("https://github.com/nicholascostadev/ignite-shop/LISCENCE.txt")
+<a href="https://github.com/nicholascostadev/ignite-shop/blob/main/LISCENCE.txt" rel="noreferrer">
+  ![MIT License](https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge)
+</a>
 
 <img src="ignite-shop.png" alt="project image">
 
