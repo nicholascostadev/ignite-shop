@@ -1,8 +1,8 @@
-import { styled } from "..";
+import { styled } from '..'
 
 export const HomeContainer = styled('main', {
   display: 'flex',
-  
+
   minHeight: 656,
   borderRadius: 8,
 })
@@ -20,7 +20,7 @@ export const Product = styled('div', {
   overflow: 'hidden',
 
   img: {
-    objectFit: 'cover'
+    objectFit: 'cover',
   },
 
   footer: {
@@ -47,60 +47,60 @@ export const Product = styled('div', {
       flexDirection: 'column',
       gap: 4,
       strong: {
-        color: "$white",
-        fontSize: "$lg"
+        color: '$white',
+        fontSize: '$lg',
       },
-  
+
       span: {
-        fontSize: "$xl",
+        fontSize: '$xl',
         fontWeight: 'bold',
         color: '$green300',
-      }
-    }
+      },
+    },
   },
 
   '&:hover': {
     footer: {
       transform: 'translateY(0%)',
       opacity: '1',
-    }
+    },
   },
 
   '@media (max-width: 1024px)': {
     footer: {
       transform: 'translateY(0%)',
       opacity: '1',
-    }
-  }
+    },
+  },
 })
 
-export const SliderContainer = styled("div", {
-  position: "relative",
-  marginLeft: "auto",
+export const SliderContainer = styled('div', {
+  position: 'relative',
+  marginLeft: 'auto',
   width: '100%',
   maxWidth: 'calc(100vw - ((100vw - 1180px) / 2))',
 
-  ".arrow": {
-    width: "30px",
-    height: "30px",
-    position: "absolute",
-    top: "50%",
-    transform: "translateY(-50%)",
-    "-webkit-transform": "translateY(-50%)",
-    fill: "$gray100",
-    cursor: "pointer",
+  '.arrow': {
+    width: '30px',
+    height: '30px',
+    position: 'absolute',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    '-webkit-transform': 'translateY(-50%)',
+    fill: '$gray100',
+    cursor: 'pointer',
   },
-  
-  ".arrow--left": {
-    left: "5px"
+
+  '.arrow--left': {
+    left: '5px',
   },
-  
-  ".arrow--right": {
-    left: "auto",
-    right: "5px",
+
+  '.arrow--right': {
+    left: 'auto',
+    right: '5px',
   },
-  
-  ".arrow--disabled": {
-    display: "none",
+
+  '.arrow--disabled': {
+    display: 'none',
   },
 })

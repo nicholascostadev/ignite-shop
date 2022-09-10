@@ -1,4 +1,4 @@
-import {createStitches} from '@stitches/react'
+import { createStitches } from '@stitches/react'
 
 export const {
   config,
@@ -19,7 +19,7 @@ export const {
       gray100: '#e1e1e6',
 
       green500: '#00875f',
-      green300: '#00b37e'
+      green300: '#00b37e',
     },
     fontSizes: {
       md: '1.125rem',
@@ -32,6 +32,5 @@ export const {
       bp2: '(min-width: 768px)',
       bp3: '(min-width: 1024px)',
     },
-  }
+  },
 })
-

@@ -1,11 +1,15 @@
-import { GetStaticPaths, GetStaticProps } from "next"
-import Image from "next/future/image"
+import { GetStaticPaths, GetStaticProps } from 'next'
+import Image from 'next/future/image'
 import Head from 'next/head'
-import { useRouter } from "next/router"
+import { useRouter } from 'next/router'
 import { Stripe } from 'stripe'
 import { formatCurrencyString, useShoppingCart } from 'use-shopping-cart'
-import { stripe } from "../../lib/stripe"
-import { ImageContainer, ProductContainer, ProductDetails } from "../../styles/pages/product"
+import { stripe } from '../../lib/stripe'
+import {
+  ImageContainer,
+  ProductContainer,
+  ProductDetails,
+} from '../../styles/pages/product'
 interface ProductProps {
   product: {
     id: string
@@ -23,10 +27,10 @@ export default function Product({ product }: ProductProps) {
   const isItemAlreadyInCart = !!cartDetails[product.id]
 
   async function handleBuyProduct() {
-    if(isItemAlreadyInCart) return
+    if (isItemAlreadyInCart) return
 
     addItem({
-      currency: "BRL",
+      currency: 'BRL',
       id: product.id,
       name: product.name,
       price: product.priceNotFormatted,
@@ -38,7 +42,7 @@ export default function Product({ product }: ProductProps) {
 
   const { isFallback } = useRouter()
 
-  if(isFallback) {
+  if (isFallback) {
     return <p>Loading...</p>
   }
 
@@ -50,7 +54,7 @@ export default function Product({ product }: ProductProps) {
 
       <ProductContainer>
         <ImageContainer>
-          <Image src={product.imageUrl} width={520} height={480} alt=""/>
+          <Image src={product.imageUrl} width={520} height={480} alt="" />
         </ImageContainer>
 
         <ProductDetails>
@@ -59,29 +63,29 @@ export default function Product({ product }: ProductProps) {
 
           <p>{product.description}</p>
 
-          <button disabled={isItemAlreadyInCart} onClick={handleBuyProduct}>{isItemAlreadyInCart ? "Item já adicionado" : "Colocar na sacola"}</button>
-
+          <button disabled={isItemAlreadyInCart} onClick={handleBuyProduct}>
+            {isItemAlreadyInCart ? 'Item já adicionado' : 'Colocar na sacola'}
+          </button>
         </ProductDetails>
       </ProductContainer>
     </>
-    
-  )  
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [
-      { params: { id: "prod_MNzPUFSjc0sWAF" } }
-    ],
+    paths: [{ params: { id: 'prod_MNzPUFSjc0sWAF' } }],
     fallback: true,
   }
 }
 
-export const getStaticProps: GetStaticProps<any, { id: string }> = async ({params}) => {
-  const { id } = params;
-  
+export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
+  params,
+}) => {
+  const { id } = params
+
   const product = await stripe.products.retrieve(id, {
-    expand: ['default_price']
+    expand: ['default_price'],
   })
 
   const price = product.default_price as Stripe.Price
@@ -91,12 +95,16 @@ export const getStaticProps: GetStaticProps<any, { id: string }> = async ({param
       product: {
         id: product.id,
         name: product.name,
-        imageUrl: product.images[0] ?? "",
-        price: formatCurrencyString({currency: "BRL",value: price.unit_amount,language: "pt-BR"}),
+        imageUrl: product.images[0] ?? '',
+        price: formatCurrencyString({
+          currency: 'BRL',
+          value: price.unit_amount,
+          language: 'pt-BR',
+        }),
         priceId: price.id,
         description: product.description,
-        priceNotFormatted: price.unit_amount
-      }
+        priceNotFormatted: price.unit_amount,
+      },
     },
     revalidate: 60 * 60 * 1, // 1 hour
   }

@@ -1,8 +1,8 @@
-import { keyframes, styled } from ".."
+import { keyframes, styled } from '..'
 
-export const CartDrawerContainer = styled("div", {
-  backgroundColor: "$gray800",
-  position: "fixed",
+export const CartDrawerContainer = styled('div', {
+  backgroundColor: '$gray800',
+  position: 'fixed',
   top: 0,
   right: 0,
   display: 'flex',
@@ -10,36 +10,36 @@ export const CartDrawerContainer = styled("div", {
   overflow: 'hidden',
   transition: 'all 0.35s ease-in-out',
   transform: 'translateX(100%)',
-  filter: 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08))',
-
+  filter:
+    'drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08))',
 
   padding: 24,
 
-  minHeight: "100vh",
+  minHeight: '100vh',
   width: 480,
-  maxWidth: "100%",
+  maxWidth: '100%',
   zIndex: 10,
 
   variants: {
     isOpen: {
-      'true': {
-        transform: "translateX(0)"
-      }
-    }
-  }
+      true: {
+        transform: 'translateX(0)',
+      },
+    },
+  },
 })
 
-export const CartDrawerCloseButton = styled("button", {
-  backgroundColor: "transparent",
+export const CartDrawerCloseButton = styled('button', {
+  backgroundColor: 'transparent',
   border: 0,
   lineHeight: 0,
-  position: "absolute",
-  color: "$gray300",
+  position: 'absolute',
+  color: '$gray300',
   right: 24,
   cursor: 'pointer',
 })
 
-export const CartDrawerMainInfo = styled("main", {
+export const CartDrawerMainInfo = styled('main', {
   margin: '4.5rem 1.5rem 0',
   height: '100%',
   flex: 1,
@@ -47,7 +47,7 @@ export const CartDrawerMainInfo = styled("main", {
   flexDirection: 'column',
 
   h1: {
-    fontSize: "$md",
+    fontSize: '$md',
     marginBottom: 32,
   },
 
@@ -63,19 +63,19 @@ export const CartDrawerMainInfo = styled("main", {
       justifyContent: 'space-between',
 
       p: {
-        color: "$gray300"
-      }
+        color: '$gray300',
+      },
     },
-  }
+  },
 })
 
-export const CartDrawerItemsContainer = styled("div", {
-  display: "flex",
-  flexDirection: "column",
+export const CartDrawerItemsContainer = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
   gap: 24,
 })
 
-export const CartDrawerItem = styled("div", {
+export const CartDrawerItem = styled('div', {
   display: 'flex',
   gap: 20,
 
@@ -93,30 +93,30 @@ export const CartDrawerItem = styled("div", {
       height: '50%',
 
       a: {
-        color: "$gray500",
-        textDecoration: "none",
+        color: '$gray500',
+        textDecoration: 'none',
 
-        "&:hover": {
-          textDecoration: "underline",
-        }
-      }
-    }
+        '&:hover': {
+          textDecoration: 'underline',
+        },
+      },
+    },
   },
 
   button: {
-    background: "transparent",
+    background: 'transparent',
     border: 0,
-    color: "$green500",
+    color: '$green500',
     cursor: 'pointer',
     padding: '.25rem .25rem .25rem 0',
 
-    "&:hover": {
-      color: "$green300"
-    }
-  }
+    '&:hover': {
+      color: '$green300',
+    },
+  },
 })
 
-export const CartDrawerItemImage = styled("div", {
+export const CartDrawerItemImage = styled('div', {
   width: 95,
   height: 95,
   borderRadius: 8,
@@ -125,37 +125,37 @@ export const CartDrawerItemImage = styled("div", {
 
 const spinner = keyframes({
   to: {
-    transform: "rotate(360deg)",
+    transform: 'rotate(360deg)',
   },
-});
+})
 
-export const CartDrawerButton = styled("button", {
+export const CartDrawerButton = styled('button', {
   padding: '20px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   border: 0,
-  backgroundColor: "$green300",
-  color: "$white",
-  fontWeight: "bold",
+  backgroundColor: '$green300',
+  color: '$white',
+  fontWeight: 'bold',
   borderRadius: 8,
   width: '100%',
   cursor: 'pointer',
-  fontSize: "$md",
+  fontSize: '$md',
 
   marginTop: '3.75rem',
 
   '&:not(:disabled):hover': {
-    backgroundColor: "$green500",
+    backgroundColor: '$green500',
   },
 
   '&:disabled': {
     filter: 'brightness(0.7)',
-    cursor: 'not-allowed'
+    cursor: 'not-allowed',
   },
 
   svg: {
     lineHeight: 0,
     animation: `${spinner}  .8s linear infinite`,
-  }
+  },
 })

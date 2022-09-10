@@ -1,6 +1,6 @@
-import { styled } from ".."
+import { styled } from '..'
 
-export const HeaderContainer = styled("header", {
+export const HeaderContainer = styled('header', {
   padding: '2rem 0',
   width: '100%',
   maxWidth: 1180,
@@ -13,22 +13,22 @@ export const HeaderContainer = styled("header", {
 
   variants: {
     isOnSuccessPage: {
-      'true': {
+      true: {
         justifyContent: 'center',
-      }
-    }
+      },
+    },
   },
 
   '@media (max-width: 1024px)': {
-    padding: '0 1rem 2rem'
-  }
+    padding: '0 1rem 2rem',
+  },
 })
 
-export const CartButton = styled("button", {
+export const CartButton = styled('button', {
   border: 0,
   padding: 12,
   borderRadius: 6,
-  
+
   lineHeight: 0,
 
   cursor: 'pointer',
@@ -41,33 +41,32 @@ export const CartButton = styled("button", {
       borderRadius: 99999,
       height: 24,
       width: 24,
-      backgroundColor: "$green500",
+      backgroundColor: '$green500',
       position: 'absolute',
       right: 0,
       top: 0,
-    }
+    },
   },
 
   defaultVariants: {
-    color: "gray"
+    color: 'gray',
   },
   variants: {
     color: {
       green: {
         backgroundColor: '$green500',
-        color: "$white",
+        color: '$white',
 
-        
         '&:hover': {
           filter: 'brightness(0.8)',
         },
       },
       gray: {
         backgroundColor: '$gray800',
-        color: "$gray300",
+        color: '$gray300',
 
         '&:hover': {
-          filter: 'brightness(0.8)'
+          filter: 'brightness(0.8)',
         },
       },
     },
@@ -77,7 +76,7 @@ export const CartButton = styled("button", {
           borderRadius: 99999,
           height: 28,
           width: 28,
-          backgroundColor: "$green500",
+          backgroundColor: '$green500',
           right: 0,
           top: 0,
           marginRight: -7,
@@ -89,8 +88,8 @@ export const CartButton = styled("button", {
           justifyContent: 'center',
           alignItems: 'center',
           color: '$white',
-        }
-      }
-    }
+        },
+      },
+    },
   },
 })

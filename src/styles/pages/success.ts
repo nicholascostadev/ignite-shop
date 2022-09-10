@@ -1,6 +1,6 @@
-import { styled } from "..";
+import { styled } from '..'
 
-export const SuccessContainer = styled("main", {
+export const SuccessContainer = styled('main', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -10,13 +10,13 @@ export const SuccessContainer = styled("main", {
 
   h1: {
     fontSize: '$2xl',
-    color: "$gray100",
-    marginTop: '3rem'
+    color: '$gray100',
+    marginTop: '3rem',
   },
 
   p: {
     fontSize: '$xl',
-    color: "$gray300",
+    color: '$gray300',
     maxWidth: 560,
     textAlign: 'center',
     marginTop: '2rem',
@@ -32,20 +32,20 @@ export const SuccessContainer = styled("main", {
     fontWeight: 'bold',
 
     '&:hover': {
-      color: '$green300'
-    }
+      color: '$green300',
+    },
   },
 
   variants: {
     multiple: {
-      'true': {
+      true: {
         flexDirection: 'row',
-      }
-    }
-  }
+      },
+    },
+  },
 })
 
-export const ImageContainer = styled("div", {
+export const ImageContainer = styled('div', {
   width: '100%',
   maxWidth: 130,
   height: 145,
@@ -53,40 +53,41 @@ export const ImageContainer = styled("div", {
   borderRadius: 8,
   padding: '0.25rem',
   marginTop: '4rem',
-  
+
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
 
   img: {
-    objectFit: 'cover'
+    objectFit: 'cover',
   },
 
   variants: {
     multiple: {
-      'true': {
+      true: {
         width: 140,
         maxWidth: 140,
         height: 140,
         borderRadius: 9999999,
-        filter: 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))'
-      }
-    }
-  }
+        filter:
+          'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+      },
+    },
+  },
 })
 
-export const SuccessProductsContainer = styled("div", {
+export const SuccessProductsContainer = styled('div', {
   variants: {
     isMultiple: {
-      'true': {
-        display: "flex",
+      true: {
+        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: "5%",
+        marginLeft: '5%',
         '& > div': {
-          marginLeft: '-10%'
-        }
-      }
-    }
-  }
+          marginLeft: '-10%',
+        },
+      },
+    },
+  },
 })

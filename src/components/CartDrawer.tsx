@@ -1,14 +1,22 @@
-import Image from "next/future/image";
-import Link from "next/link";
-import { SpinnerGap, X } from "phosphor-react";
-import { useState } from "react";
-import { useShoppingCart } from "use-shopping-cart";
-import { CartDrawerButton, CartDrawerCloseButton, CartDrawerContainer, CartDrawerItem, CartDrawerItemImage, CartDrawerItemsContainer, CartDrawerMainInfo } from '../styles/components/cartDrawer';
-import { api } from '../utils/api';
+import Image from 'next/future/image'
+import Link from 'next/link'
+import { SpinnerGap, X } from 'phosphor-react'
+import { useState } from 'react'
+import { useShoppingCart } from 'use-shopping-cart'
+import {
+  CartDrawerButton,
+  CartDrawerCloseButton,
+  CartDrawerContainer,
+  CartDrawerItem,
+  CartDrawerItemImage,
+  CartDrawerItemsContainer,
+  CartDrawerMainInfo,
+} from '../styles/components/cartDrawer'
+import { api } from '../utils/api'
 
 export function CartDrawer() {
   const [isRedirecting, setIsRedirecting] = useState(false)
-  const { 
+  const {
     cartDetails,
     removeItem,
     formattedTotalPrice,
@@ -16,7 +24,7 @@ export function CartDrawer() {
     shouldDisplayCart,
     handleCartClick,
     redirectToCheckout,
-    clearCart
+    clearCart,
   } = useShoppingCart()
   const hasItemsInCart = !!cartCount
 
@@ -25,12 +33,11 @@ export function CartDrawer() {
   }
 
   async function handleRedirectUserToCheckout() {
-
     try {
       setIsRedirecting(true)
 
       const response = await api.post('api/checkout', {
-        items: cartDetails
+        items: cartDetails,
       })
 
       const { checkoutSessionId } = response.data
@@ -38,12 +45,11 @@ export function CartDrawer() {
       const result = await redirectToCheckout(checkoutSessionId)
 
       if (result?.error) {
-        console.error("Result error: ", result)
-      } 
-
+        console.error('Result error: ', result)
+      }
     } catch (err) {
       alert('Falha ao redirecionar ao checkout')
-      console.log({err})
+      console.log({ err })
       setIsRedirecting(false)
     }
   }
@@ -55,20 +61,23 @@ export function CartDrawer() {
       </CartDrawerCloseButton>
 
       <CartDrawerMainInfo>
-        {
-          hasItemsInCart ? 
-            (<h1>Sacola de compras</h1>)
-            : 
-            (<h1>Você não tem nenhum item selecionado, que tal selecionar um?</h1>)
-        }
-
+        {hasItemsInCart ? (
+          <h1>Sacola de compras</h1>
+        ) : (
+          <h1>Você não tem nenhum item selecionado, que tal selecionar um?</h1>
+        )}
 
         <CartDrawerItemsContainer>
-          {Object.keys(cartDetails).map(key => {
+          {Object.keys(cartDetails).map((key) => {
             return (
               <CartDrawerItem key={cartDetails[key].id}>
                 <CartDrawerItemImage>
-                  <Image src={cartDetails[key].image} alt="" width={95} height={95} />
+                  <Image
+                    src={cartDetails[key].image}
+                    alt=""
+                    width={95}
+                    height={95}
+                  />
                 </CartDrawerItemImage>
                 <div>
                   <div>
@@ -78,12 +87,15 @@ export function CartDrawer() {
                     <strong>{cartDetails[key].formattedValue}</strong>
                   </div>
 
-                  <button onClick={handleRemoveProductFromCart(cartDetails[key].id)}>Remover</button>
+                  <button
+                    onClick={handleRemoveProductFromCart(cartDetails[key].id)}
+                  >
+                    Remover
+                  </button>
                 </div>
               </CartDrawerItem>
             )
           })}
-          
         </CartDrawerItemsContainer>
 
         <footer>
@@ -91,7 +103,13 @@ export function CartDrawer() {
             <>
               <div>
                 <p>Quantidade</p>
-                <p>{hasItemsInCart ? `${cartCount} item`: cartCount > 1 ? `${cartCount} itens`: ""}</p>
+                <p>
+                  {hasItemsInCart
+                    ? `${cartCount} item`
+                    : cartCount > 1
+                    ? `${cartCount} itens`
+                    : ''}
+                </p>
               </div>
               <div>
                 <strong>Valor total</strong>
@@ -100,17 +118,11 @@ export function CartDrawer() {
             </>
           )}
 
-          <CartDrawerButton 
-            disabled={!hasItemsInCart || isRedirecting} 
+          <CartDrawerButton
+            disabled={!hasItemsInCart || isRedirecting}
             onClick={handleRedirectUserToCheckout}
           >
-            {isRedirecting ? (
-              <SpinnerGap size={22} />
-            ): (
-              "Finalizar compra"
-            )}
-            
-           
+            {isRedirecting ? <SpinnerGap size={22} /> : 'Finalizar compra'}
           </CartDrawerButton>
         </footer>
       </CartDrawerMainInfo>
