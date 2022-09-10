@@ -46,7 +46,6 @@ npm run dev
 
 > Uma loja de roupas feita com `React` e `TypeScript`.
 
-## English
 ### Tecnologias utilizadas
 - React
 - [Stitches](https://stitches.dev/)
