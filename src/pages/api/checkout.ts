@@ -33,7 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     mode: 'payment',
     line_items: lineItems
   })
-  
+
   return res.status(201).json({
     checkoutSessionId: checkoutSession.id
   })

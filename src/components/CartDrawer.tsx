@@ -29,7 +29,7 @@ export function CartDrawer() {
     try {
       setIsRedirecting(true)
 
-      const response = await axios.post('/api/checkout', {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/checkout`, {
         items: cartDetails
       })
 
@@ -43,7 +43,7 @@ export function CartDrawer() {
 
     } catch (err) {
       alert('Falha ao redirecionar ao checkout')
-      console.error(err)
+      console.log({err})
       setIsRedirecting(false)
     }
   }

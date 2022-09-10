@@ -8,7 +8,7 @@ import { Container } from '../styles/pages/app';
 
 globalStyles();
 
-const stripeKey = process.env.STRIPE_PUBLIC_API_KEY
+const stripeKey = "pk_test_51LfDKBARIofxqPkqq1p7kvJP9oEb7VrkhC1q9R0Op2Y9QWd2BihTCdFS8QxjO0oyG9N6DAhH2KrqG1UQwcKP4XzE00JCp0JjXv"
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
