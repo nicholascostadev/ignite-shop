@@ -1,34 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ignite Shop
 
-## Getting Started
+> Read in [English](##English) or  [Portuguese](##Portuguese)
 
-First, run the development server:
+![GitHub repo size](https://img.shields.io/github/repo-size/nicholascostadev/ignite-shop?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/nicholascostadev/ignite-shop?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/nicholascostadev/ignite-shop?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/nicholascostadev/ignite-shop?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/nicholascostadev/ignite-shop?style=for-the-badge)
+
+<img src="ignite-shop-landing.jpeg" alt="project image">
+
+> A clothing store made with `React` and `TypeScript`.
+
+## English
+### Technologies Used
+- React
+- [Stitches](https://stitches.dev/)
+- Stripe API
+- [keen-slider](https://keen-slider.io/)
+- [useShoppingCart](https://useshoppingcart.com/)
+### Tweaks and updates
+
+The project is still under development and there will be more updates following the list below:
+
+- [ ] Mobile responsivity( under development yet )
+
+## 🚀 Run it locally
+
+For running the project locally, follow these steps in your terminal:
 
 ```bash
+# Clone the repository
+git clone https://github.com/nicholascostadev/ignite-shop.git
+# Install all dependencies 
+cd ignite-shop
+npm install
+
+# Run the project in development mode
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Portuguese
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<img src="ignite-shop-landing.jpeg" alt="project image">
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+> Uma loja de roupas feita com `React` e `TypeScript`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## English
+### Tecnologias utilizadas
+- React
+- [Stitches](https://stitches.dev/)
+- Stripe API
+- [keen-slider](https://keen-slider.io/)
+- [useShoppingCart](https://useshoppingcart.com/)
+### Tweaks and updates
 
-## Learn More
+Esse projeto ainda está em desenvolvimento e terá atualizações de acordo com a lista abaixo:
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] Responsividade no Mobile( em desenvolvimento )
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Run it locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Para rodar o projeto localmente, siga esses passos no seu terminal:
 
-## Deploy on Vercel
+```bash
+# Clone o repositório
+git clone https://github.com/nicholascostadev/ignite-shop.git
+# Instale as dependências
+cd ignite-shop
+npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Inicie o projeto em desenvolvimento
+npm run dev
+```

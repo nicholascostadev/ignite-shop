@@ -6,6 +6,8 @@ export const HomeContainer = styled('main', {
   maxWidth: 'calc(100vw - ((100vw - 1180px) / 2))',
   marginLeft: 'auto',
   minHeight: 656,
+  position: 'absolute',
+  right: 0,
 })
 
 export const Product = styled('div', {
@@ -66,4 +68,33 @@ export const Product = styled('div', {
       opacity: '1',
     }
   }
+})
+
+export const SliderContainer = styled("div", {
+  position: "relative",
+  marginLeft: "auto",
+
+  ".arrow": {
+    width: "30px",
+    height: "30px",
+    position: "absolute",
+    top: "50%",
+    transform: "translateY(-50%)",
+    "-webkit-transform": "translateY(-50%)",
+    fill: "$gray100",
+    cursor: "pointer",
+  },
+  
+  ".arrow--left": {
+    left: "5px"
+  },
+  
+  ".arrow--right": {
+    left: "auto",
+    right: "5px",
+  },
+  
+  ".arrow--disabled": {
+    display: "none",
+  },
 })

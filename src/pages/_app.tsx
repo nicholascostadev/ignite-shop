@@ -8,22 +8,19 @@ import { Container } from '../styles/pages/app';
 
 globalStyles();
 
+const stripeKey = process.env.STRIPE_PUBLIC_API_KEY
+
 export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <CartProvider
-      mode="payment"
-      cartMode="client-only"
-      stripe={process.env.STRIPE_SECRET_API_KEY}
-      successUrl="http://localhost:3000/success"
-      cancelUrl="http://localhost:3000/"
-      currency="BRL"
-      allowedCountries={['US', 'GB', 'CA', 'BR']}
-      loading={<p>Loading...</p>}
-    >
-      <Container>
-        <Header />
-        <Component {...pageProps} />
-      </Container>
-    </CartProvider>
-  )
+    return (
+      <CartProvider
+        cartMode="checkout-session"
+        stripe={stripeKey}
+        currency="BRL"
+      >
+        <Container>
+          <Header />
+          <Component {...pageProps} />
+        </Container>
+      </CartProvider>
+    )
 }

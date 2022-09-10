@@ -11,15 +11,11 @@ export const HeaderContainer = styled("header", {
   alignItems: 'center',
   position: 'relative',
 
-  '> div': {
-    '> div': {
-      borderRadius: 99999,
-      height: 24,
-      width: 24,
-      backgroundColor: "$green500",
-      position: 'absolute',
-      right: 0,
-      top: 0,
+  variants: {
+    isOnSuccessPage: {
+      'true': {
+        justifyContent: 'center',
+      }
     }
   }
 })
@@ -35,11 +31,18 @@ export const CartButton = styled("button", {
   transition: 'all 0.2s ease',
   position: 'relative',
 
-  div: {
-    display: 'none'
+  '> div': {
+    display: 'none',
+    '> div': {
+      borderRadius: 99999,
+      height: 24,
+      width: 24,
+      backgroundColor: "$green500",
+      position: 'absolute',
+      right: 0,
+      top: 0,
+    }
   },
-
-  
 
   defaultVariants: {
     color: "gray"
