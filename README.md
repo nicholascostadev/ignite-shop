@@ -1,6 +1,9 @@
 # Ignite Shop
+<br>
 
-> Read in [English](##English) or  [Portuguese](##Portuguese)
+> ### Read in [English](##English) or  [Portuguese](##Portuguese)
+
+<br>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/nicholascostadev/ignite-shop?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/nicholascostadev/ignite-shop?style=for-the-badge)
@@ -58,6 +61,14 @@ npm run dev
 ### Deployment
 The easiest way to deploy Nextjs projects is with [Vercel](https://vercel.com), just create an account there and follow the instructions.
 
+### How to test it
+One of the cards you can use for testing is:
+
+`4242 4242 4242 4242` 
+
+the rest of the data may be completely random, but the expiration date may be a valid one.
+
+Other cards are available here: [Testing cards](https://stripe.com/docs/testing)
 ## Portuguese
 
 <img src="ignite-shop.png" alt="project image">
@@ -71,7 +82,7 @@ The easiest way to deploy Nextjs projects is with [Vercel](https://vercel.com), 
 - [keen-slider](https://keen-slider.io/)
 - [useShoppingCart](https://useshoppingcart.com/)
 
-### Tweaks and updates
+### Ajustes e Updates
 
 Esse projeto ainda está em desenvolvimento e terá atualizações de acordo com a lista abaixo:
 
@@ -91,7 +102,7 @@ cd ignite-shop
 npm install
 ```
 
-Crie umac conta no Stripe e coloque suas chaves de API no 
+Crie uma conta no Stripe e coloque suas chaves de API no 
 arquivo `.env.local`
 
 ```bash
@@ -111,3 +122,12 @@ npm run dev
 
 ### Deployment
 A maneira mais de dar deploy em projetos Nextjs é pela [Vercel](https://vercel.com), é só criar uma conta e seguir as instruções.
+
+### Como testar
+Um dos cartões que você pode usar para testar é o:
+
+`4242 4242 4242 4242` 
+
+o resto dos dados pode ser completamente aleatório, tirando a data de validade que tem que ser uma data válida.
+
+Outros cartões estão disponíveis por aqui: [Cartões de teste](https://stripe.com/docs/testing)
