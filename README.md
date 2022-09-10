@@ -1,21 +1,21 @@
 # Ignite Shop
 <br>
 
-> ### Read in [English](##English) or  [Portuguese](##Portuguese)
+> ### Read in [English](#English) or  [Portuguese](#Portuguese)
 
 <br>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/nicholascostadev/ignite-shop?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/nicholascostadev/ignite-shop?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/nicholascostadev/ignite-shop?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/nicholascostadev/ignite-shop?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/nicholascostadev/ignite-shop?style=for-the-badge)
+![Github open issues](https://img.shields.io/github/issues/nicholascostadev/ignite-shop?style=for-the-badge)
+[![MIT License](https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge)]("https://github.com/nicholascostadev/ignite-shop/LISCENCE.txt")
 
 <img src="ignite-shop.png" alt="project image">
 
 > A clothing store made with `React` and `TypeScript`.
 
-## English
+# English
 ### Technologies Used
 - React
 - [Stitches](https://stitches.dev/)
@@ -69,7 +69,7 @@ One of the cards you can use for testing is:
 the rest of the data may be completely random, but the expiration date may be a valid one.
 
 Other cards are available here: [Testing cards](https://stripe.com/docs/testing)
-## Portuguese
+# Portuguese
 
 <img src="ignite-shop.png" alt="project image">
 
