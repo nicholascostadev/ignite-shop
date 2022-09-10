@@ -29,7 +29,7 @@ export function CartDrawer() {
     try {
       setIsRedirecting(true)
 
-      const response = await api.post('/api/checkout', {
+      const response = await api.post('api/checkout', {
         items: cartDetails
       })
 
