@@ -17,6 +17,7 @@ export const CartDrawerContainer = styled("div", {
 
   minHeight: "100vh",
   width: 480,
+  maxWidth: "100%",
   zIndex: 10,
 
   variants: {

@@ -8,7 +8,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/nicholascostadev/ignite-shop?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/nicholascostadev/ignite-shop?style=for-the-badge)
 
-<img src="ignite-shop-landing.jpeg" alt="project image">
+<img src="ignite-shop.png" alt="project image">
 
 > A clothing store made with `React` and `TypeScript`.
 
@@ -23,7 +23,7 @@
 
 The project is still under development and there will be more updates following the list below:
 
-- [ ] Mobile responsivity( under development yet )
+- [x] Mobile responsivity( under development yet )
 
 ## 🚀 Run it locally
 
@@ -42,7 +42,7 @@ npm run dev
 
 ## Portuguese
 
-<img src="ignite-shop-landing.jpeg" alt="project image">
+<img src="ignite-shop.png" alt="project image">
 
 > Uma loja de roupas feita com `React` e `TypeScript`.
 

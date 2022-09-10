@@ -17,6 +17,10 @@ export const HeaderContainer = styled("header", {
         justifyContent: 'center',
       }
     }
+  },
+
+  '@media (max-width: 1024px)': {
+    padding: '0 1rem 2rem'
   }
 })
 

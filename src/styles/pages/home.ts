@@ -2,12 +2,9 @@ import { styled } from "..";
 
 export const HomeContainer = styled('main', {
   display: 'flex',
-  width: '100%',
-  maxWidth: 'calc(100vw - ((100vw - 1180px) / 2))',
-  marginLeft: 'auto',
+  
   minHeight: 656,
-  position: 'absolute',
-  right: 0,
+  borderRadius: 8,
 })
 
 export const Product = styled('div', {
@@ -67,12 +64,21 @@ export const Product = styled('div', {
       transform: 'translateY(0%)',
       opacity: '1',
     }
+  },
+
+  '@media (max-width: 1024px)': {
+    footer: {
+      transform: 'translateY(0%)',
+      opacity: '1',
+    }
   }
 })
 
 export const SliderContainer = styled("div", {
   position: "relative",
   marginLeft: "auto",
+  width: '100%',
+  maxWidth: 'calc(100vw - ((100vw - 1180px) / 2))',
 
   ".arrow": {
     width: "30px",

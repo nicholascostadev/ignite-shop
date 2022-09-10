@@ -37,6 +37,20 @@ export default function Home({ products }: HomeProps) {
       perView: 3,
       spacing: 48, 
     },
+    breakpoints: {
+      '(max-width: 1180px)': {
+        slides: {
+          perView: 2,
+          spacing: 48,
+        }
+      },
+      '(max-width: 768px)': {
+        slides: {
+          perView: 1,
+          spacing: 48,
+        }
+      },
+    },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
     },
@@ -106,7 +120,7 @@ export default function Home({ products }: HomeProps) {
                 }
                 disabled={
                   currentSlide ===
-                  instanceRef.current.track.details.slides.length - 3
+                  instanceRef.current.track.details.slides.length - 1
                 }
               />
             </>
