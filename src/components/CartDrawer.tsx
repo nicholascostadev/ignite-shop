@@ -1,10 +1,10 @@
-import axios from 'axios';
 import Image from "next/future/image";
 import Link from "next/link";
 import { SpinnerGap, X } from "phosphor-react";
 import { useState } from "react";
 import { useShoppingCart } from "use-shopping-cart";
 import { CartDrawerButton, CartDrawerCloseButton, CartDrawerContainer, CartDrawerItem, CartDrawerItemImage, CartDrawerItemsContainer, CartDrawerMainInfo } from '../styles/components/cartDrawer';
+import { api } from '../utils/api';
 
 export function CartDrawer() {
   const [isRedirecting, setIsRedirecting] = useState(false)
@@ -29,7 +29,7 @@ export function CartDrawer() {
     try {
       setIsRedirecting(true)
 
-      const response = await axios.post('/api/checkout', {
+      const response = await api.post('/api/checkout', {
         items: cartDetails
       })
 
