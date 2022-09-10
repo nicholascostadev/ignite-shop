@@ -29,7 +29,7 @@ export function CartDrawer() {
     try {
       setIsRedirecting(true)
 
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/checkout`, {
+      const response = await axios.post('/api/checkout', {
         items: cartDetails
       })
 
