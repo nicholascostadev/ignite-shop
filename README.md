@@ -23,22 +23,40 @@
 
 The project is still under development and there will be more updates following the list below:
 
-- [x] Mobile responsivity( under development yet )
+- [x] Mobile responsivity
 
-## 🚀 Run it locally
+### 🚀 Run it locally
 
 For running the project locally, follow these steps in your terminal:
 
 ```bash
+# terminal
+
 # Clone the repository
 git clone https://github.com/nicholascostadev/ignite-shop.git
 # Install all dependencies 
 cd ignite-shop
 npm install
+```
 
+Create an account in Stripe and setup the API key in a `.env.local` file
+```bash
+# .env.local
+
+STRIPE_PUBLIC_API_KEY=publickeywithouthquotes
+STRIPE_SECRET_API_KEY=privatekeywithouthquotes
+# This URL should be http://localhost:3000 if you're
+# in development mode
+NEXT_PUBLIC_VERCEL_URL=productionwebsite
+```
+
+```bash
 # Run the project in development mode
 npm run dev
 ```
+
+### Deployment
+The easiest way to deploy Nextjs projects is with [Vercel](https://vercel.com), just create an account there and follow the instructions.
 
 ## Portuguese
 
@@ -52,23 +70,44 @@ npm run dev
 - Stripe API
 - [keen-slider](https://keen-slider.io/)
 - [useShoppingCart](https://useshoppingcart.com/)
+
 ### Tweaks and updates
 
 Esse projeto ainda está em desenvolvimento e terá atualizações de acordo com a lista abaixo:
 
-- [ ] Responsividade no Mobile( em desenvolvimento )
+- [x] Responsividade no Mobile
 
-## 🚀 Run it locally
+### 🚀 Run it locally
 
 Para rodar o projeto localmente, siga esses passos no seu terminal:
 
 ```bash
+# terminal
+
 # Clone o repositório
 git clone https://github.com/nicholascostadev/ignite-shop.git
 # Instale as dependências
 cd ignite-shop
 npm install
+```
 
-# Inicie o projeto em desenvolvimento
+Crie umac conta no Stripe e coloque suas chaves de API no 
+arquivo `.env.local`
+
+```bash
+# .env.local
+
+STRIPE_PUBLIC_API_KEY=apipublicasemaspas
+STRIPE_SECRET_API_KEY=apiprivadasemaspas
+# Essa URL deve ser http://localhost:3000 se você está
+# em ambiente de desenvolvimento
+NEXT_PUBLIC_VERCEL_URL=websitedeproducao
+```
+
+```bash
+# Rode o projeto em modo de desenvolvimento
 npm run dev
 ```
+
+### Deployment
+A maneira mais de dar deploy em projetos Nextjs é pela [Vercel](https://vercel.com), é só criar uma conta e seguir as instruções.
